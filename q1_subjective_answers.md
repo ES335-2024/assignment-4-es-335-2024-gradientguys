@@ -1,10 +1,8 @@
 ```markdown
 ## Are the results as expected? Why or why not?
-- The results vary across different models.
-- The VGG_1_block model achieved relatively high training accuracy but low testing accuracy, indicating potential overfitting.
-- The VGG_3block model achieved higher testing accuracy compared to VGG_1_block, which is expected as it has more capacity to learn features.
-- The VGG_3blocks_data_aug model shows a slight decrease in testing accuracy compared to VGG_3block, suggesting that data augmentation did not significantly improve generalization.
-- The VGG_19_tuning_all and VGG_19_tuning_mlp models show relatively poor performance, indicating that the approach of fine-tuning all layers or using an MLP model on top of VGG19 might not be suitable for this dataset.
+- The results show varying levels of training and testing accuracy across different models and configurations. 
+- Overall, the performance seems to align with expectations to some extent. Models with more trainable parameters and deeper architectures tend to have higher training accuracy, but this doesn't always translate to better testing accuracy. 
+- For example, vgg_19_tuning_mlp has perfect training accuracy but slightly lower testing accuracy compared to vgg_19_tuning_all, indicating potential overfitting.
 
 ## Does data augmentation help? Why or why not?
 - In this case, data augmentation (VGG_3blocks_data_aug) did not significantly improve testing accuracy compared to the model without data augmentation (VGG_3block).
